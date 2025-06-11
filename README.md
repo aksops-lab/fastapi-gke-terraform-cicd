@@ -53,8 +53,8 @@ kubectl apply -f ../k8s/
 ```
 ___
 
-# Folder Structure
-
+## 📂 Folder Structure
+```
 fastapi-gke-terraform-cicd/
 ├── app/                         # FastAPI source code
 │   ├── main.py
