@@ -51,6 +51,9 @@ gcloud container clusters get-credentials fastapi-gke-cluster --zone=us-central1
 kubectl apply -f ../k8s/
 
 ```
+___
+
+# Folder Structure
 
 fastapi-gke-terraform-cicd/
 ├── app/                         # FastAPI source code
