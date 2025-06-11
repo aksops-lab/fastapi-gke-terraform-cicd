@@ -50,3 +50,35 @@ gcloud container clusters get-credentials fastapi-gke-cluster --zone=us-central1
 # Deploy the FastAPI app
 kubectl apply -f ../k8s/
 
+```
+
+fastapi-gke-terraform-cicd/
+├── app/                         # FastAPI source code
+│   ├── main.py
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+├── terraform/                   # GCP infrastructure as code
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   ├── versions.tf
+│   └── terraform.tfvars         # Add to .gitignore if secrets
+│
+├── k8s/                         # Kubernetes manifests
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── ingress.yaml             # Optional (for domain routing)
+│
+├── cicd/                        # CI/CD pipelines
+│   └── cloudbuild.yaml          # Or use GitHub Actions
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml           # Optional GitHub Actions
+│
+├── .dockerignore
+├── .gitignore
+├── README.md
+└── LICENSE
+
